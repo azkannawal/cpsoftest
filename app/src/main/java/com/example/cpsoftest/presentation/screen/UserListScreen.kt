@@ -143,11 +143,13 @@ fun UserListScreen(
                 modifier = Modifier
                     .fillMaxWidth()
                     .background(ColorCard)
-                    .padding(horizontal = 16.dp, vertical = 10.dp)
+                    .padding(vertical = 10.dp)
                     .horizontalScroll(rememberScrollState()),
                 horizontalArrangement = Arrangement.spacedBy(8.dp),
                 verticalAlignment = Alignment.CenterVertically
             ) {
+                Spacer(Modifier.width(16.dp))
+
                 // Sort button
                 SortButton(sortLabel = sortLabel, onClick = viewModel::toggleSort)
 
@@ -178,6 +180,8 @@ fun UserListScreen(
                         }
                     )
                 }
+
+                Spacer(Modifier.width(16.dp))
             }
 
             // Active filter indicator
